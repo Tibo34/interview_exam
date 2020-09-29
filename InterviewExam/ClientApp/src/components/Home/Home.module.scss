@@ -1,0 +1,31 @@
+.container {
+  height: 100vh;
+
+  .logo {
+    width: 200px;
+  }
+
+  .button {
+    background-color: #26a0da;
+    margin: 20px;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    opacity: 0.8;
+  }
+
+  .result {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+
+    img {
+      width: 150px;
+    }
+  }
+}
