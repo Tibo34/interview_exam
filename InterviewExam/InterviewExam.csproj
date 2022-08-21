@@ -10,8 +10,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.AzureAD.UI" Version="3.1.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.28" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.8" />
     <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.13.0" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="1.10.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,10 +29,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\authConfig.ts" />
+    <None Remove="ClientApp\src\components\NotAuthenticate\NotAuthenticate.tsx" />
+    <None Remove="ClientApp\src\models\Token.ts" />
+    <None Remove="ClientApp\src\models\User.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="ClientApp\package-lock.json" />
     <Content Include="ClientApp\package.json" />
     <Content Include="ClientApp\public\manifest.json" />
     <Content Include="ClientApp\tsconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\authConfig.ts" />
+    <TypeScriptCompile Include="ClientApp\src\components\NotAuthenticate\NotAuthenticate.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\models\Token.ts" />
+    <TypeScriptCompile Include="ClientApp\src\models\User.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

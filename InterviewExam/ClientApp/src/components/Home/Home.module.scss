@@ -1,31 +1,39 @@
 .container {
-  height: 100vh;
 
-  .logo {
-    width: 200px;
-  }
+    margin-top:250px;
 
-  .button {
-    background-color: #26a0da;
-    margin: 20px;
-    padding: 10px;
-    border: none;
-    color: white;
-    font-size: 50px;
-    cursor: pointer;
-  }
+    .start {
+        margin: auto;
+        width: 200px;
+        text-align: center;
 
-  .button:hover {
-    opacity: 0.8;
-  }
+        .logo {
+            width: 200px;
+        }
 
-  .result {
-    color: white;
-    font-size: 20px;
-    text-align: center;
-
-    img {
-      width: 150px;
+        .button {
+            background-color: #26a0da;
+            margin: 20px;
+            padding: 10px;
+            border: none;
+            color: white;
+            font-size: 50px;
+            cursor: pointer;
+        }
     }
-  }
+
+
+    .button:hover {
+        opacity: 0.8;
+    }
+
+    .result {
+        color: white;
+        font-size: 20px;
+        text-align: center;
+
+        img {
+            width: 150px;
+        }
+    }
 }
